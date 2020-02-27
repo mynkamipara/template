@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 const passport = require('passport');
 const session = require('express-session');
-var mongoose=require('mongoose');
+/* var mongoose=require('mongoose'); */
 const flash = require('connect-flash');
 var rand = require("random-key");
 var routes = require('./routes/index');
@@ -74,7 +74,7 @@ app.use('/test', test);
 
 
 
-// mongoDb Connection
+/* // mongoDb Connection
 mongoose.connect('mongodb://localhost:27017/signup', {useNewUrlParser: true});
 
 mongoose.connection.on('connected', function(){
@@ -83,7 +83,7 @@ mongoose.connection.on('connected', function(){
 
 mongoose.connection.on('error', function(){
     console.log("Mongoose coonection error");
-});
+}); */
 
 
 
