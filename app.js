@@ -14,7 +14,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var crud= require('./routes/crud');
 var test = require('./routes/test');
-
+require('dotenv').config()
 //mysql config
 
 var mysql = require('mysql');
@@ -39,6 +39,9 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.locals = {
+    base_url:process.env.BASE_URL
+}
 
  // Connect flash
  app.use(flash());
